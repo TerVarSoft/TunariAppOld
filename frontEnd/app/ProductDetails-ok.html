@@ -1,0 +1,63 @@
+<html ng-app="tunariAppApp">
+    <head>
+        <meta charset="utf-8">
+        <title>Tunari App</title>
+        
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/lumen-bootstrap.min.css" />
+    </head>
+    
+    <body ng-controller="ProductCtrl">
+        <header class="container">
+            <div class="navbar navbar-default">
+                <div class="navbar-inner">
+                    <ul class="nav">
+                    
+                    </ul>
+                </div>
+            </div>
+        </header>
+        
+        <div class="container">
+            <div class="col-md-7">
+                <img ng-src="{{product.imageUrl}}" class="img-thumbnail" />
+            </div>
+            
+            <div class="col-md-5">
+                <h1 class="row"><strong>{{product.name}}</strong></h1>
+                
+                <hr/>
+                
+                <div class="row">
+                    <div class="col-md-7 col-xs-6">
+                        <h4><strong>Precio/Paquete: </strong>{{product.normalSellingPricePerPackage}} Bs.</h4>
+                        <h4><strong>Precio/Unidad: </strong>{{product.normalSellingPricePerUnit}} Bs.</h4>
+                        <h4><strong>Tamaño: </strong>{{product.size}}</h4>
+                    </div>
+                    
+                    <div class="col-md-5 col-xs-6"> 
+                        <h4><strong>Cantidad: </strong>{{product.quantity}}</h4>
+                        <h4><strong>Tipo: </strong>{{product.type}}</h4>
+                        <h4><strong>Genero: </strong>{{product.genre}}</h4>
+                    </div>
+                </div>
+                
+                <hr/>
+                
+                <div class="row">
+                    <div class="col-md-12 col-xs-12">
+                        <h4><strong>Precio Especial de Venta/Paquete: </strong>{{product.specialSellingPricePerPackage}} Bs.</h4>
+                        <h4><strong>Precio Especial de Venta/Unidad: </strong>{{product.specialSellingPricePerPackage}} Bs.</h4>
+                        <h4><strong>Precio de Compra/Paquete: </strong>{{product.buyingPricePerPackage}} Bs.</h4>
+                        <h4><strong>Precio de Compra/Unidad: </strong>{{product.buyingPricePerUnit}} Bs.</h4>
+                    </div>                
+            </div>
+        </div>
+        
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/ProductCtrl.js"></script>
+        
+    </body>
+</html>

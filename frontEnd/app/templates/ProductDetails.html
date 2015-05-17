@@ -1,0 +1,40 @@
+<div>
+    <div class="col-lg-2 col-xs-1"></div>
+    <div class="col-lg-8 col-xs-10 box-shadow">
+        <div class="col-md-7">
+            <img ng-src="{{product.imageUrl}}" class="img-thumbnail" />
+        </div>
+
+        <div class="col-md-5">
+            <h1 class="row"><strong>{{product.name}}</strong></h1>
+
+            <hr/>
+
+            <div class="row">
+                <div class="col-md-7 col-xs-6">
+                    <h4><strong>Precio/P: </strong>{{product.normalSellingPricePerPackage}} Bs.</h4>
+                    <h4><strong>Precio/U: </strong>{{product.normalSellingPricePerUnit}} Bs.</h4>
+                    <h4><strong>Tamaño: </strong>{{product.size}}</h4>
+                </div>
+
+                <div class="col-md-5 col-xs-6"> 
+                    <h4><strong>Cantidad: </strong>{{product.quantity}}</h4>
+                    <h4><strong>Tipo: </strong>{{product.type}}</h4>
+                    <h4><strong>Genero: </strong>{{product.genre}}</h4>
+                </div>
+            </div>
+
+            <hr/>
+
+            <div class="row">
+                <div class="col-md-12 col-xs-12">
+                    <h4><strong>Precio Especial de Venta/P: </strong>{{product.specialSellingPricePerPackage}} Bs.</h4>
+                    <h4><strong>Precio Especial de Venta/U: </strong>{{product.specialSellingPricePerPackage}} Bs.</h4>
+                    <h4><strong>Precio de Compra/P: </strong>{{product.buyingPricePerPackage}} Bs.</h4>
+                    <h4><strong>Precio de Compra/U: </strong>{{product.buyingPricePerUnit}} Bs.</h4>
+                </div>                
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-2 col-xs-1"></div>
+</div>

@@ -1,0 +1,71 @@
+<div class="element-container">
+    
+    <h1 class="text-center"><strong>Mostrario</strong></h1>
+    
+    <div class="container">
+        <form class="form-horizontal">
+            <div class="row">
+                <div class="form-group col-md-10 col-sm-10 col-xs-10">
+                    <label for=nameInput class="control-label col-md-2 col-sm-2 col-xs-4">Buscar :</label>
+                    
+                    <div class="input-group col-md-10 col-sm-10 col-xs-8">
+                        <input ng-model="tags" type="text" name="nameInput" class="form-control" placeholder="Palabras Clave..." />
+                    </div>
+                </div>
+
+                <div class="form-group col-md-2 col-sm-2 col-xs-2">
+                    <div class="col-md-10s">
+                        <input ng-click="updateProducts()" type="submit" value="Buscar" class="btn btn-success" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-md-10 col-xs-12">
+                    <label class="control-label col-md-2 col-xs-3">Tipo :</label>
+
+                    <div class="col-md-10 col-xs-9">
+                        <div class="dropdown">
+                            <button class="btn btn-primary" id="productType">{{selectedType}}</button>
+                            <button class="btn btn-primary btn-lg" data-toggle="dropdown">
+                                <span class="caret"></span>
+                            </button>
+
+                            <ul  class="dropdown-menu" id="reasonDropdown">
+                              
+                                    <li ng-repeat="productType in productTypes">
+                                        <a href="#/products" tabindex="-1" ng-click='changeType(productType)'>{{productType}}</a>
+                                    </li>
+                               
+                                <!--<li><a tabindex="-1" ng-click="changeType(Memento)">Memento</a></li>
+                                <li><a tabindex="-1" ng-click="updateProducts()">Estampa</a></li>-->
+                            </ul>
+                        </div>
+                    </div> 
+                </div>
+
+            <div class="col-md-2 "></div>
+            </div>
+        </form>
+    </div> 
+    
+    <hr/>
+    
+    <div class="row">
+        <ul class="thumbnails">
+            <div class="col-lg-3 col-md-4 col-sm-6" ng-repeat="product in products">
+                
+                    <hover-element class="box-shadow thumbnail">
+                        <a href="#/product/{{product._id}}">
+                        <img ng-src="http://192.168.0.101:8000/{{product.imageUrl}}" alt="ALT NAME" class="img-thumbnail" />
+                        <div>
+                            <h3><strong>{{product.name}}</strong></h3>
+                            <p><strong>Precio/Paquete: </strong>{{product.normalSellingPricePerUnit}}</p>
+                        </div>
+                            </a>
+                    </hover-element>
+                
+            </div>
+        </ul>
+    </div>
+</div>    

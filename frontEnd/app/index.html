@@ -1,0 +1,42 @@
+<html ng-app="tunariAppApp">
+    <head>
+        <meta charset="utf-8">
+        <title>Tunari App</title>
+        
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/lumen-bootstrap.min.css" />
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+    
+    <body>
+        <div ng-include="'templates/Header.html'"></div>                   
+        
+        <div class=row>
+            <div class="view-container">
+                <ng-view></ng-view>
+            </div>
+        </div>
+        
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular/angular-route.min.js"></script>
+        <script src="bower_components/angular/restangular.min.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="scripts/controllers/app.config.js"></script>
+        <script src="scripts/controllers/ProductListCtrl.js"></script>
+        <script src="scripts/controllers/ProductCtrl.js"></script>
+        <script src="scripts/controllers/RegisterCtrl.js"></script>
+        <script src="scripts/controllers/HeaderCtrl.js"></script>
+        <script src="scripts/controllers/PrinterListCtrl.js"></script>
+        <script src="scripts/controllers/LogoutCtrl.js"></script>
+        <script src="scripts/controllers/LoginCtrl.js"></script>
+        <script src="scripts/directives/ValidateEquals.js"></script>
+        <script src="scripts/services/AuthToken.js"></script>
+        <script src="scripts/services/Auth.js"></script>
+        <script src="scripts/services/AuthInterceptor.js"></script>
+        <script src="bower_components/underscore/underscore-min.js"></script>
+        
+        
+    </body>
+</html>

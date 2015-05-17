@@ -1,0 +1,45 @@
+<html ng-app="tunariAppApp">
+    <head>
+        <meta charset="utf-8">
+        <title>Tunari App</title>
+        
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/lumen-bootstrap.min.css" />
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+    
+    <body ng-controller="ProductListCtrl">
+        <header class="container">
+            <div class="navbar navbar-default">
+                <div class="navbar-inner">
+                    <ul class="nav">
+                    
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="plist-container" ng-controller="ProductListCtrl">
+            <div class="row">
+                <ul class="thumbnails">
+                    <div class="col-lg-3 col-md-4 col-sm-6" ng-repeat="product in products">
+                        <div class="box-shadow thumbnail">
+                            <img ng-src="{{product.imageUrl}}" alt="ALT NAME" class="img-thumbnail" />
+                            <div>
+                                <h3><strong>{{product.name}}</strong></h3>
+                                <p><strong>Precio/Paquete: </strong>{{product.normalSellingPricePerUnit}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>    
+        
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/ProductListCtrl.js"></script>
+        <script src="scripts/services/ProductData.js"></script>
+        
+    </body>
+</html>
